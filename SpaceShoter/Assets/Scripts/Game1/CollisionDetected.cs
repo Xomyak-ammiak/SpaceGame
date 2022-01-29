@@ -7,6 +7,7 @@ public class CollisionDetected : MonoBehaviour
 {
     public GameObject explosion;
     public GameObject button;
+    public GameObject Home;
     public GameObject maxScoreText;
 
     private void Awake()
@@ -25,6 +26,7 @@ public class CollisionDetected : MonoBehaviour
             Destroy(newExplosion, 1.5f);
             PlayerPrefs.SetInt("ToLose", 1);
             button.SetActive(true);
+            Home.SetActive(true);
             maxScoreText.SetActive(true);
         }
     }
